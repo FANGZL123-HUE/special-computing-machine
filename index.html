@@ -12,7 +12,7 @@
         }
         .background-image {
             /* 设置背景图片 */
-            background-image: url('https://fangzl123-hue.github.io/special-computing-machine/zc1.jpg');
+            background-image: url('zc1.jpg'); /* 确保这里的路径正确 */
             /* 背景图片覆盖整个页面 */
             background-size: cover;
             /* 背景图片不重复 */
@@ -21,6 +21,14 @@
             background-attachment: fixed;
             /* 背景图片居中 */
             background-position: center;
+            /* 设置背景颜色和透明度 */
+            background-color: rgba(255, 255, 255, 0.5);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1; /* 确保背景图片在内容后面 */
         }
         .login-container {
             position: absolute;
@@ -33,6 +41,7 @@
             border-radius: 5px;
             background-color: rgba(255, 255, 255, 0.5); /* 设置背景颜色和透明度 */
             width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
         }
         .login-form {
             text-align: center; /* 文本居中对齐 */
@@ -60,33 +69,32 @@
     </style>
 </head>
 <body>
-    <div class="background-image">
-        <div class="login-container">
-            <div class="login-form">
-                <form id="loginForm">
-                    <div class="input-box">
-                        <label for="username">用户名:</label>
-                        <input type="text" id="username" name="username" required>
-                    </div>
-                    <div class="input-box">
-                        <label for="password">密码:</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
-                    <button type="submit" class="login-btn">登录</button>
-                    <div class="register-link">
-                        还没有账号？<a href="register.html">立即注册</a>
-                    </div>
-                </form>
-            </div>
+    <div class="background-image"></div>
+    <div class="login-container">
+        <div class="login-form">
+            <form id="loginForm">
+                <div class="input-box">
+                    <label for="username">用户名:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-box">
+                    <label for="password">密码:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="login-btn">登录</button>
+                <div class="register-link">
+                    还没有账号？<a href="register.html">立即注册</a>
+                </div>
+            </form>
         </div>
     </div>
     <script>
         document.getElementById('loginForm').onsubmit = function(event) {
-            event.preventDefault(); 
+            event.preventDefault();
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
             if (username === 'admin' && password === 'admin') {
-                window.location.href = 'https://fangzl123-hue.github.io/special-computing-machine/HtmlPage1.html'; 
+                window.location.href = 'https://fangzl123-hue.github.io/special-computing-machine/HtmlPage1.html';
             } else {
                 alert('账号或密码错误！');
             }
