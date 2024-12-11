@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商城页面</title>
+    <style>
+        .carousel {
+            width: 100%;
+            height: 10vh; /* 10% of the viewport height */
+            overflow: hidden;
+            position: relative;
+        }
+
+            .carousel img {
+                width: 100%;
+                height: 100%;
+                display: none;
+                object-fit: cover;
+            }
+
+                .carousel img.active {
+                    display: block;
+                }
+
+        .category {
+            margin-top: 20px;
+        }
+
+        .category-item {
+            display: inline-block;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .sub-category {
+            display: none;
+            margin-top: 10px;
+        }
+
+            .sub-category.active {
+                display: block;
+            }
+
+        .item {
+            margin-top: 10px;
+            display: inline-block;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+            .item img {
+                width: 100%;
+                height: auto;
+            }
+    </style>
+</head>
+<body>
+    <!-- 第一部分：图片轮播 -->
+    <div class="carousel">
+        <img src="image1.jpg" class="active" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+    </div>
+    <script>
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+        const interval = 3000; // 3 seconds
+        function cycleImages() {
+            images[currentImageIndex].classList.remove('active');
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            images[currentImageIndex].classList.add('active');
+        }
+        setInterval(cycleImages, interval);
+    </script>
+    <!-- 第二部分：购物分类 -->
+    <div class="category">
+        <div class="category-item" onclick="toggleSubCategory('electronics')">电子设备</div>
+        <div class="category-item" onclick="toggleSubCategory('bedding')">床上用品</div>
+        <div class="category-item" onclick="toggleSubCategory('office')">办公用品</div>
+    </div>
+    <div id="electronicsSubCategories" class="sub-category">
+        <div class="item" onclick="location.href='page4.html';">手机</div>
+        <div class="item" onclick="location.href='page5.html';">电脑</div>
+    </div>
+    <div id="beddingSubCategories" class="sub-category">
+        <div class="item" onclick="location.href='page6.html';">枕头</div>
+        <div class="item" onclick="location.href='page7.html';">床单</div>
+    </div>
+    <div id="officeSubCategories" class="sub-category">
+        <div class="item" onclick="location.href='page8.html';">打印机</div>
+        <div class="item" onclick="location.href='page9.html';">办公椅</div>
+    </div>
+    <script>
+        function toggleSubCategory(category) {
+            const subCategory = document.getElementById(category + 'SubCategories');
+            const isActive = subCategory.classList.contains('active');
+            subCategory.classList.toggle('active', !isActive);
+        }
+    </script>
+    <!-- 第三部分：物品图片 -->
+    <div class="items">
+        <!-- 物品信息将通过服务器端脚本动态生成 -->
+    </div>
+    <script>
+        // 假设这是从服务器端脚本获取的数据
+        var itemsData = [
+            { id: 1, imageUrl: "item1.jpg", category: "手机", brand: "Apple", price: "¥4999" },
+            { id: 2, imageUrl: "item2.jpg", category: "电脑", brand: "Dell", price: "¥6999" },
+            // 更多物品...
+        ];
+        function displayItems(items) {
+            var itemsContainer = document.querySelector('.items');
+            itemsContainer.innerHTML = ''; // 清空现有内容
+            items.forEach(function (item) {
+                var itemDiv = document.createElement('div');
+                itemDiv.className = 'item';
+                itemDiv.innerHTML = `
+                    <img src="${item.imageUrl}" alt="${item.category}">
+                    <div>种类: ${item.category}</div>
+                    <div>品牌: ${item.brand}</div>
+                    <div>价格: ${item.price}</div>
+                `;
+                itemsContainer.appendChild(itemDiv);
+            });
+        }
+        // 调用函数显示物品信息
+        displayItems(itemsData);
+    </script>
+</body>
+</html>
