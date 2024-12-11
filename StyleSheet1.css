@@ -1,0 +1,71 @@
+﻿/* 重置样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 背景图片 */
+.login-container {
+    background-image: url('background.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 登录表单 */
+.login-form {
+    width: 300px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 输入框 */
+.input-box {
+    margin-bottom: 10px;
+}
+
+    .input-box label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .input-box input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+/* 登录按钮 */
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background: #0056b3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+    .login-btn:hover {
+        background: #003d82;
+    }
+
+/* 注册链接 */
+.register-link {
+    margin-top: 10px;
+    text-align: center;
+    color: #0056b3;
+    text-decoration: none;
+}
+
+    .register-link a {
+        color: #0056b3;
+        text-decoration: underline;
+    }

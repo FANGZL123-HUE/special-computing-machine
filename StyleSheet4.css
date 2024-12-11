@@ -1,0 +1,118 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.wel {
+    margin-left: 10px;
+}
+
+.survey img {
+    height: 20px;
+}
+
+.survey a {
+    margin-left: 5px;
+    color: #005EA6;
+    text-decoration: none;
+}
+
+.policy {
+    background-color: #fff8f0;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login {
+    width: 400px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.top img {
+    height: 20px;
+}
+
+.inputs input[type="text"],
+.inputs input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+.user_img, .pwd_img {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-image: url('img/icons.png');
+    background-repeat: no-repeat;
+}
+
+.user_img {
+    background-position: 0 0;
+}
+
+.pwd_img {
+    background-position: -20px 0;
+}
+
+.button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e4393c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.login-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.other-login img {
+    height: 30px;
+}
+
+.enroll img {
+    height: 30px;
+}
+
+.bottom {
+    background-color: #f5f5f5;
+    padding: 10px;
+    text-align: center;
+}
+
+.about a {
+    color: #005EA6;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+    .about a:hover {
+        text-decoration: underline;
+    }

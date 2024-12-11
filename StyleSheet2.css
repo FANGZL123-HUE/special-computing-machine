@@ -1,0 +1,75 @@
+﻿/* 基础样式 */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* 容器 */
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* 顶部导航栏 */
+.top-nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.nav-links li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* 主要内容区域 */
+.main-content {
+    padding: 20px 0;
+}
+
+.product-list h2 {
+    text-align: center;
+}
+
+.product-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+    .product-item img {
+        max-width: 100%;
+        height: auto;
+    }
+
+.add-to-cart {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* 页脚 */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+    .footer p {
+        margin: 0;
+    }
