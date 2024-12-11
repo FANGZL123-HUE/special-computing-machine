@@ -5,17 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>登录页面</title>
     <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .background-image {
+            /* 设置背景图片 */
+            background-image: url('zc1.jpg');
+            /* 背景图片覆盖整个页面 */
+            background-size: cover;
+            /* 背景图片不重复 */
+            background-repeat: no-repeat;
+            /* 背景图片固定 */
+            background-attachment: fixed;
+            /* 背景图片居中 */
+            background-position: center;
+        }
         .login-container {
-            margin: 0 auto;
-            width: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            background-image: url('https://fangzl123-hue.github.io/special-computing-machine/zc1.jpg'); /* 添加背景图片 */
-            background-size: cover; /* 覆盖整个容器 */
-            background-position: center; /* 图片居中显示 */
+            background-color: rgba(255, 255, 255, 0.5); /* 设置背景颜色和透明度 */
+            width: 300px;
         }
         .login-form {
+            text-align: center; /* 文本居中对齐 */
         }
         .input-box {
             margin-bottom: 10px;
@@ -40,22 +60,24 @@
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <div class="login-form">
-            <form id="loginForm">
-                <div class="input-box">
-                    <label for="username">用户名:</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-                <div class="input-box">
-                    <label for="password">密码:</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <button type="submit" class="login-btn">登录</button>
-                <div class="register-link">
-                    还没有账号？<a href="register.html">立即注册</a>
-                </div>
-            </form>
+    <div class="background-image">
+        <div class="login-container">
+            <div class="login-form">
+                <form id="loginForm">
+                    <div class="input-box">
+                        <label for="username">用户名:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="password">密码:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="login-btn">登录</button>
+                    <div class="register-link">
+                        还没有账号？<a href="register.html">立即注册</a>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
     <script>
