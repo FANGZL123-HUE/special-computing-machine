@@ -1,16 +1,48 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-   
-    <link href="StyleSheet1.css" rel="stylesheet" />
+    <title>登录页面</title>
+    <style>
+        .login-container {
+           
+            margin: 0 auto;
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-form {
+         
+        }
+        .input-box {
+            margin-bottom: 10px;
+        }
+        .login-btn {
+       
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-btn:hover {
+            background-color: #0056b3;
+        }
+        .register-link {
+            text-align: center;
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="login-container">
         <div class="login-form">
-            <form action="login.php" method="post">
+            <form id="loginForm">
                 <div class="input-box">
                     <label for="username">用户名:</label>
                     <input type="text" id="username" name="username" required>
@@ -26,5 +58,17 @@
             </form>
         </div>
     </div>
+    <script>
+        document.getElementById('loginForm').onsubmit = function(event) {
+            event.preventDefault(); 
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            if (username === 'admin' && password === 'admin') {
+                window.location.href =  'https://fangzl123-hue.github.io/special-computing-machine/HtmlPage1.html'; 
+            } else {
+                alert('账号或密码错误！');
+            }
+        };
+    </script>
 </body>
 </html>
