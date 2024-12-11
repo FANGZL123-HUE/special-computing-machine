@@ -6,21 +6,21 @@
     <title>登录页面</title>
     <style>
         .login-container {
-           
             margin: 0 auto;
             width: 300px;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            background-image: url('https://fangzl123-hue.github.io/special-computing-machine/zc1.jpg'); /* 添加背景图片 */
+            background-size: cover; /* 覆盖整个容器 */
+            background-position: center; /* 图片居中显示 */
         }
         .login-form {
-         
         }
         .input-box {
             margin-bottom: 10px;
         }
         .login-btn {
-       
             width: 100%;
             padding: 10px;
             background-color: #007bff;
@@ -64,7 +64,7 @@
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
             if (username === 'admin' && password === 'admin') {
-                window.location.href =  'https://fangzl123-hue.github.io/special-computing-machine/HtmlPage1.html'; 
+                window.location.href = 'https://fangzl123-hue.github.io/special-computing-machine/HtmlPage1.html'; 
             } else {
                 alert('账号或密码错误！');
             }
