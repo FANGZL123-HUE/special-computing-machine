@@ -117,8 +117,8 @@
         text-decoration: underline;
     }
 body {
-     background-image: url('12.jpg');
-     background-size: contain; /* 缩小图片以适应容器 */
-     background-position: left; /* 图片左对齐 */
-     background-repeat: no-repeat; /* 不重复背景图片 */
+      background-image: url('12.jpg'), url('11.jpg');
+      background-size: contain, contain;
+      background-position: left, right;
+      background-repeat: no-repeat, no-repeat;
 }
