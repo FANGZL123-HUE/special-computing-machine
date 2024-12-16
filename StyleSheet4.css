@@ -116,3 +116,9 @@
     .about a:hover {
         text-decoration: underline;
     }
+body {
+    background-image: url('12.jpg');
+    background-size: cover; /* 覆盖整个页面 */
+    background-position: center; /* 图片居中显示 */
+    background-repeat: no-repeat; /* 不重复背景图片 */
+}
