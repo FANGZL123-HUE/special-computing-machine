@@ -1,4 +1,22 @@
-﻿/* 全局样式重置 */
+/* Image container styles */
+.image-container {
+  display: flex;
+  align-items: center; /* Vertical alignment if needed */
+}
+/* Left-aligned image */
+.image-container.left .image {
+  margin-right: auto; /* Pushes the image to the left */
+}
+/* Right-aligned image */
+.image-container.right .image {
+  margin-left: auto; /* Pushes the image to the right */
+}
+/* Image size */
+.image {
+  max-width: 100%; /* Ensures the image doesn't overflow its container */
+  height: auto; /* Maintains aspect ratio */
+}
+/* 全局样式重置 */
 * {
     margin: 0;
     padding: 0;
