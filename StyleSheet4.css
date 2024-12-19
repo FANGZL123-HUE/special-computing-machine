@@ -1,20 +1,25 @@
 /* 图片容器样式 */
 .image-container {
-    text-align: center; /* 默认居中对齐 */
-    margin: 20px 0; /* 添加一些外边距 */
-}
-/* 左对齐图片 */
-.image-container.left {
-    text-align: left; /* 左对齐 */
-}
-/* 右对齐图片 */
-.image-container.right {
-    text-align: right; /* 右对齐 */
+    display: inline-block; /* 使容器表现为内联块级元素 */
+    vertical-align: middle; /* 垂直居中对齐 */
 }
 /* 图片样式 */
 .image {
-    max-width: 50%; /* 图片最大宽度为容器宽度 */
+    max-width: 100%; /* 图片最大宽度为容器宽度 */
     height: auto; /* 高度自适应 */
+}
+/* 登录表单图片样式 */
+.login-images {
+    text-align: center; /* 登录表单图片居中对齐 */
+    width: 100%; /* 宽度为100% */
+}
+/* 左对齐图片 */
+.login-images .left {
+    float: left; /* 左浮动 */
+}
+/* 右对齐图片 */
+.login-images .right {
+    float: right; /* 右浮动 */
 }
 /* 全局样式重置 */
 * {
