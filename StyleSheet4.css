@@ -1,20 +1,20 @@
-/* Image container styles */
+/* 图片容器样式 */
 .image-container {
-  display: flex;
-  align-items: center; /* Vertical alignment if needed */
+    text-align: center; /* 默认居中对齐 */
+    margin: 20px 0; /* 添加一些外边距 */
 }
-/* Left-aligned image */
-.image-container.left .image {
-  margin-right: auto; /* Pushes the image to the left */
+/* 左对齐图片 */
+.image-container.left {
+    text-align: left; /* 左对齐 */
 }
-/* Right-aligned image */
-.image-container.right .image {
-  margin-left: auto; /* Pushes the image to the right */
+/* 右对齐图片 */
+.image-container.right {
+    text-align: right; /* 右对齐 */
 }
-/* Image size */
+/* 图片样式 */
 .image {
-  max-width: 100%; /* Ensures the image doesn't overflow its container */
-  height: auto; /* Maintains aspect ratio */
+    max-width: 100%; /* 图片最大宽度为容器宽度 */
+    height: auto; /* 高度自适应 */
 }
 /* 全局样式重置 */
 * {
