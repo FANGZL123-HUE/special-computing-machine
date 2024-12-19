@@ -1,124 +1,209 @@
-﻿* {
+﻿/* 全局样式重置 */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
+/* 主题颜色变量 */
+:root {
+    --primary-color: #005EA6;
+    --background-color: #ffffff;
+    --border-color: #cccccc;
+    --error-color: #ff0000;
+    --text-color: #333333;
+    --link-hover-color: #004480;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+/* 顶部导航样式 */
 .top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
-    padding: 10px;
+    background-color: var(--background-color);
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-.logo img {
-    height: 50px;
+.top .logo img {
+    height: 60px;
 }
-
-.wel {
+.top .survey img {
+    height: 25px;
+}
+.top .survey a {
     margin-left: 10px;
-}
-
-.survey img {
-    height: 20px;
-}
-
-.survey a {
-    margin-left: 5px;
-    color: #005EA6;
+    color: var(--primary-color);
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
-
+.top .survey a:hover {
+    color: var(--link-hover-color);
+}
+/* 政策信息样式 */
 .policy {
     background-color: #fff8f0;
-    padding: 10px;
+    padding: 10px 20px;
     text-align: center;
     font-size: 14px;
-    color: #666;
+    color: var(--text-color);
 }
-
+/* 主体内容样式 */
 .main {
     display: flex;
     justify-content: center;
     padding: 20px;
 }
-
+/* 登录表单样式 */
 .login {
     width: 400px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--background-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-.top img {
-    height: 20px;
-}
-
-.inputs input[type="text"],
-.inputs input[type="password"] {
-    width: 100%;
+.login .inputs input {
+    width: calc(100% - 22px);
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
 }
-
-.user_img, .pwd_img {
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    background-image: url('img/icons.png');
-    background-repeat: no-repeat;
-}
-
-.user_img {
-    background-position: 0 0;
-}
-
-.pwd_img {
-    background-position: -20px 0;
-}
-
-.button {
+.login .button {
     width: 100%;
     padding: 10px;
     background-color: #e4393c;
     color: white;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
 }
-
-.login-bottom {
-    display: flex;
-    justify-content: space-between;
+.login .button:hover {
+    background-color: #c00;
+}
+/* 登录按钮下方的错误信息样式 */
+.error-message {
+    color: var(--error-color);
+    text-align: center;
     margin-top: 10px;
 }
-
-.other-login img {
-    height: 30px;
+/* 扫码登录和账户登录水平排列 */
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
-
-.enroll img {
-    height: 30px;
+ul li {
+    margin-right: 10px;
 }
-
+ul li:last-child {
+    margin-right: 0;
+}
+/* 底部信息样式 */
 .bottom {
     background-color: #f5f5f5;
-    padding: 10px;
+    padding: 10px 20px;
     text-align: center;
 }
-
+/* 关于页面链接样式 */
 .about a {
-    color: #005EA6;
+    color: var(--primary-color);
     text-decoration: none;
     margin: 0 10px;
 }
-
-    .about a:hover {
-        text-decoration: underline;
-    }
+.about a:hover {
+    text-decoration: underline;
+    color: var(--link-hover-color);
+}
+/* 登录按钮样式 */
+.btnLogin {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+.btnLogin:hover {
+    background-color: #a00;
+}
+/* 增加一些间距和对齐 */
+.wel {
+    margin-left: 10px;
+}
+.policy img {
+    margin-right: 10px;
+}
+.text {
+    display: inline-block;
+    vertical-align: middle;
+}
+.bottom ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.bottom li {
+    margin: 0 10px;
+}
+.bottom li:first-child {
+    margin-left: 0;
+}
+.bottom li:last-child {
+    margin-right: 0;
+}
+.bottom li:not(:last-child)::after {
+    content: '|';
+    margin-left: 10px;
+}
+/* 添加一些美观的细节 */
+.login .button:active {
+    background-color: #900;
+}
+.login .inputs input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 94, 166, 0.5);
+}
+/* 添加一些美观的字体样式 */
 body {
-      background-image: url('12.jpg'), url('11.jpg');
-      background-size: contain, contain;
-      background-position: left, right;
-      background-repeat: no-repeat, no-repeat;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.top .logo img {
+    animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* 添加一些美观的阴影效果 */
+.top, .policy, .bottom {
+    transition: box-shadow 0.3s ease;
+}
+.top:hover, .policy:hover, .bottom:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+/* 添加一些美观的背景渐变 */
+.btnLogin {
+    background: linear-gradient(to bottom, #ff3333 0%, #c00 100%);
+}
+.btnLogin:hover {
+    background: linear-gradient(to bottom, #c00 0%, #900 100%);
 }
