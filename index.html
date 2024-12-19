@@ -1,104 +1,1532 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登录页面</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .background-image {
-            /* 设置背景图片 */
-            background-image: url('zc1.jpg'); /* 确保这里的路径正确 */
-            /* 背景图片覆盖整个页面 */
-            background-size: cover;
-            /* 背景图片不重复 */
-            background-repeat: no-repeat;
-            /* 背景图片固定 */
-            background-attachment: fixed;
-            /* 背景图片居中 */
-            background-position: center;
-            /* 设置背景颜色和透明度 */
-            background-color: rgba(255, 255, 255, 0.5);
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1; /* 确保背景图片在内容后面 */
-        }
-        .login-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            margin: 0;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: rgba(255, 255, 255, 0.5); /* 设置背景颜色和透明度 */
-            width: 300px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
-        }
-        .login-form {
-            text-align: center; /* 文本居中对齐 */
-        }
-        .input-box {
-            margin-bottom: 10px;
-        }
-        .login-btn {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .login-btn:hover {
-            background-color: #0056b3;
-        }
-        .register-link {
-            text-align: center;
-            display: block;
-            margin-top: 10px;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="author" content="order by dede58.com" />
+	<title>商城</title>
+	<link href="style.css" rel="stylesheet" />
+
 </head>
-<body>
-    <div class="background-image"></div>
-    <div class="login-container">
-        <div class="login-form">
-            <form id="loginForm">
-                <div class="input-box">
-                    <label for="username">用户名:</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-                <div class="input-box">
-                    <label for="password">密码:</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <button type="submit" class="login-btn">登录</button>
-                <div class="register-link">
-                    还没有账号？<a href="register.html">立即注册</a>
-                </div>
-            </form>
-        </div>
-    </div>
-    <script>
-        document.getElementById('loginForm').onsubmit = function(event) {
-            event.preventDefault();
-            var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
-            if (username === 'admin' && password === 'admin') {
-                window.location.href = 'https://fangzl123-hue.github.io/special-computing-machine/HtmlPage1.html';
-            } else {
-                alert('账号或密码错误！');
-            }
-        };
-    </script>
-</body>
+	<body>
+	<!-- start header -->
+		<header>
+			<div class="top center">
+				<div class="left fl">
+					<ul>
+						<li><a href="http://www.mi.com/" target="_blank">商城</a></li>
+						<li>|</li>
+						<li><a href="">系统</a></li>
+						<li>|</li>
+						<li><a href="">聊天</a></li>
+						<li>|</li>
+						<li><a href="">游戏</a></li>
+						<li>|</li>
+						<li><a href="">阅读</a></li>
+						<li>|</li>
+						<li><a href="">云服务</a></li>
+						<li>|</li>
+						<li><a href="">金融</a></li>
+						<li>|</li>
+						<li><a href="">商城移动版</a></li>
+						<li>|</li>
+						<li><a href="">问题反馈</a></li>
+						<li>|</li>
+						<li><a href="">Select Region</a></li>
+						<div class="clear"></div>
+					</ul>
+				</div>
+				<div class="right fr">
+					<div class="gouwuche fr"><a href="gouwuche.html">购物车</a></div>
+					<div class="fr">
+						<ul>
+							<li><a href="WebForm3.aspx" target="_blank">登录</a></li>
+							<li>|</li>
+							<li><a href="WebForm1.aspx" target="_blank" >注册</a></li>
+							<li>|</li>
+							<li><a href="self_info.html">个人中心</a></li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</header>
+	<!--end header -->
+
+<!-- start banner_x -->
+		<div class="banner_x center">
+			<a href="./index.html" target="_blank"><div class="logo fl"></div></a>
+			<a href=""><div class="ad_top fl"></div></a>
+			<div class="nav fl">
+				<ul>
+					<li><a href="./liebiao.html" target="_blank">手机</a></li>
+					<li><a href="">品牌</a></li>
+					<li><a href="">平板·笔记本</a></li>
+					<li><a href="">电视</a></li>
+					<li><a href="">盒子·影音</a></li>
+					<li><a href="">路由器</a></li>
+					<li><a href="">智能硬件</a></li>
+					<li><a href="">服务</a></li>
+					<li><a href="">社区</a></li>
+				</ul>
+			</div>
+			<div class="search fr">
+				<form action="" method="post">
+					<div class="text fl">
+						<input type="text" class="shuru"  placeholder="小米6&nbsp;小米MIX现货">
+					</div>
+					<div class="submit fl">
+						<input type="submit" class="sousuo" value="搜索"/>
+					</div>
+					<div class="clear"></div>
+				</form>
+				<div class="clear"></div>
+			</div>
+		</div>
+<!-- end banner_x -->
+
+	<!-- start banner_y -->
+		<div class="banner_y center">
+			<div class="nav">				
+				<ul>
+					<li>
+						<a href="">数码电子</a>
+						<a href="">手机</a>
+						<div class="pop">
+							<div class="left fl">
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/1.jpg" alt=""></div>
+											<span class="fl">IQOO Z9</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="./xiangqing.html" target="_blank">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/2.jpg" alt=""></div>
+											<span class="fl">IQOO Neo10</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/3.jpg" alt=""></div>
+											<span class="fl">IQOO 12</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/4.jpg" alt=""></div>
+											<span class="fl">苹果 16</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/5.jpg" alt=""></div>
+											<span class="fl">VIVO y200</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/6.jpg" alt=""></div>
+											<span class="fl">vivo x60</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>								
+							</div>
+							<div class="ctn fl">
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/7.jpg" alt=""></div>
+											<span class="fl">redmi note13</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/8.jpg" alt=""></div>
+											<span class="fl">IQOO Z9x</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/9.jpg" alt=""></div>
+											<span class="fl">IQOO Neo9</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/10.jpg" alt=""></div>
+											<span class="fl">荣耀x60</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/11.jpg" alt=""></div>
+											<span class="fl">红米13pro</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/12.jpg" alt=""></div>
+											<span class="fl">华为 pura70</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+							</div>
+							<div class="right fl">
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/compare.jpg" alt=""></div>
+											<span class="fl">对比手机</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<!-- <div class="xuangou_right fr"><a href="">选购</a></div> -->
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/mimobile.jpg" alt=""></div>
+											<span class="fl">小米移动&nbsp;电话卡</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<!-- <div class="xuangou_right fr"><a href="">选购</a></div> -->
+									<div class="clear"></div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</li>
+					<li>
+						<a href="">家具</a>
+						<a href="">沙发</a>
+						<div class="pop">
+							<div class="left fl">
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/13.jpg" alt=""></div>
+											<span class="fl">1</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/14.jpg" alt=""></div>
+											<span class="fl">2</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/15.jpg" alt=""></div>
+											<span class="fl">3</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/16.jpg" alt=""></div>
+											<span class="fl">4</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/17.jpg" alt=""></div>
+											<span class="fl">5</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/18.jpg" alt=""></div>
+											<span class="fl">6</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>								
+							</div>
+							<div class="ctn fl">
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/19.jpg" alt=""></div>
+											<span class="fl">7</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/20.jpg" alt=""></div>
+											<span class="fl">8</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/21.jpg" alt=""></div>
+											<span class="fl">9</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/22.jpg" alt=""></div>
+											<span class="fl">10</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/23.jpg" alt=""></div>
+											<span class="fl">11</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/24.jpg" alt=""></div>
+											<span class="fl">12</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+							</div>
+							
+							<div class="clear"></div>
+						</div>
+					</li>
+					<li>
+						<a href="">衣服</a>
+						<a href="">男款</a>
+						<div class="pop">
+							<div class="left fl">
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/25.jpg" alt=""></div>
+											<span class="fl">1</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/26.jpg" alt=""></div>
+											<span class="fl">2</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/27.jpg" alt=""></div>
+											<span class="fl">3</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/28.jpg" alt=""></div>
+											<span class="fl">4</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/29.jpg" alt=""></div>
+											<span class="fl">5</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/30.jpg" alt=""></div>
+											<span class="fl">6</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>								
+							</div>
+							<div class="ctn fl">
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/31.jpg" alt=""></div>
+											<span class="fl">7</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/32.jpg" alt=""></div>
+											<span class="fl">8</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/33.jpg" alt=""></div>
+											<span class="fl">9</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/34.jpg" alt=""></div>
+											<span class="fl">10</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/35.jpg" alt=""></div>
+											<span class="fl">11</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/36.jpg" alt=""></div>
+											<span class="fl">12</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+							</div>
+							<div class="right fl">
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/compare.jpg" alt=""></div>
+											<span class="fl"></span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<!-- <div class="xuangou_right fr"><a href="">选购</a></div> -->
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/mimobile.jpg" alt=""></div>
+											<span class="fl">小米移动&nbsp;电话卡</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<!-- <div class="xuangou_right fr"><a href="">选购</a></div> -->
+									<div class="clear"></div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</li>
+					<li>
+						<a href="">装扮</a>
+						<a href="">口红</a>
+						<div class="pop">
+							<div class="left fl">
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/37.jpg" alt=""></div>
+											<span class="fl">1</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/38,jpg" alt=""></div>
+											<span class="fl">2</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src=".\image/39.jpg" alt=""></div>
+											<span class="fl">3</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src=".\image/40.jpg" alt=""></div>
+											<span class="fl">4</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/41.jpg" alt=""></div>
+											<span class="fl">5</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/42.jpg" alt=""></div>
+											<span class="fl">6</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>								
+							</div>
+							<div class="ctn fl">
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/43.jpg" alt=""></div>
+											<span class="fl">7</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/44.jpg" alt=""></div>
+											<span class="fl">8</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/45.jpg" alt=""></div>
+											<span class="fl">9</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/46.jpg" alt=""></div>
+											<span class="fl">10</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/47.jpg" alt=""></div>
+											<span class="fl">11</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/48.jpg" alt=""></div>
+											<span class="fl">12</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+							</div>
+							<div class="right fl">
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/compare.jpg" alt=""></div>
+											<span class="fl"></span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<!-- <div class="xuangou_right fr"><a href="">选购</a></div> -->
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/mimobile.jpg" alt=""></div>
+											<span class="fl"></span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<!-- <div class="xuangou_right fr"><a href="">选购</a></div> -->
+									<div class="clear"></div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</li>
+					<li>
+						<a href="">儿童</a>
+						<a href="">玩具</a>
+						<div class="pop">
+							<div class="left fl">
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/49.jpg" alt=""></div>
+											<span class="fl">1</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/50.jpg" alt=""></div>
+											<span class="fl">2</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/51.jpg" alt=""></div>
+											<span class="fl">3</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/52.jpg" alt=""></div>
+											<span class="fl">4</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/53.jpg" alt=""></div>
+											<span class="fl">5</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/54.jpg" alt=""></div>
+											<span class="fl">6</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>								
+							</div>
+							<div class="ctn fl">
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/55.jpg" alt=""></div>
+											<span class="fl">7</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/56.jpg" alt=""></div>
+											<span class="fl">8</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/57.jpg" alt=""></div>
+											<span class="fl">9</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/58.jpg" alt=""></div>
+											<span class="fl">10</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/59.jpg" alt=""></div>
+											<span class="fl">11</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/60.jpg" alt=""></div>
+											<span class="fl">12</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+							</div>
+							<div class="right fl">
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image .jpg" alt=""></div>
+											<span class="fl"> </span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<!-- <div class="xuangou_right fr"><a href="">选购</a></div> -->
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/ .jpg" alt=""></div>
+											<span class="fl"> </span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<!-- <div class="xuangou_right fr"><a href="">选购</a></div> -->
+									<div class="clear"></div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</li>
+					<li>
+						<a href="">食品</a>
+						<a href="">水产</a>
+						<div class="pop">
+							<div class="left fl">
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/61.jpg" alt=""></div>
+											<span class="fl">1</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/62.jpg" alt=""></div>
+											<span class="fl">2</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/63.jpg" alt=""></div>
+											<span class="fl">3</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/64.jpg" alt=""></div>
+											<span class="fl">4</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/65.jpg" alt=""></div>
+											<span class="fl">5</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/66.jpg" alt=""></div>
+											<span class="fl">6</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+							</div>
+							<div class="ctn fl">
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/67.jpg" alt=""></div>
+											<span class="fl">7</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/68.jpg" alt=""></div>
+											<span class="fl">8</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/69.jpg" alt=""></div>
+											<span class="fl">9</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/70.jpg" alt=""></div>
+											<span class="fl">10</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/71.jpg" alt=""></div>
+											<span class="fl">11</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/72.jpg" alt=""></div>
+											<span class="fl">12</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+							</div>
+							<div class="right fl">
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/73.jpg" alt=""></div>
+											<span class="fl"> </span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<!-- <div class="xuangou_right fr"><a href="">选购</a></div> -->
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/74.jpg" alt=""></div>
+											<span class="fl"> </span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<!-- <div class="xuangou_right fr"><a href="">选购</a></div> -->
+									<div class="clear"></div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</li>
+					<li>
+						<a href="">零售</a>
+						<a href="">食品</a>
+						<div class="pop">
+							<div class="left fl">
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/75.jpg" alt=""></div>
+											<span class="fl">1</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/76.jpg" alt=""></div>
+											<span class="fl">2</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/77.jpg" alt=""></div>
+											<span class="fl">3</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/78.jpg" alt=""></div>
+											<span class="fl">4</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/79.jpg" alt=""></div>
+											<span class="fl">5</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/80.jpg" alt=""></div>
+											<span class="fl">6</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>								
+							</div>							
+							<div class="clear"></div>
+						</div>
+					</li>
+					<li>
+						<a href="">零食</a>
+						<a href="">加热产品</a>
+						<div class="pop">
+							<div class="left fl">
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/81.jpg" alt=""></div>
+											<span class="fl">1</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/82.jpg" alt=""></div>
+											<span class="fl">2</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/83.jpg" alt=""></div>
+											<span class="fl">3</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/84.jpg" alt=""></div>
+											<span class="fl">4</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/85.jpg" alt=""></div>
+											<span class="fl">5</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/86.jpg" alt=""></div>
+											<span class="fl">6</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>			
+							</div>
+							<div class="clear"></div>
+						</div>
+					</li>
+					<li>
+						<a href="">工具</a>
+						<a href="">加工产品</a>
+						<div class="pop">
+							<div class="left fl">
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/87.jpg" alt=""></div>
+											<span class="fl">1</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/88.jpg" alt=""></div>
+											<span class="fl">2</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/89.jpg" alt=""></div>
+											<span class="fl">3</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/90.jpg" alt=""></div>
+											<span class="fl">4</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/91.jpg" alt=""></div>
+											<span class="fl">5</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/92.jpg" alt=""></div>
+											<span class="fl">6</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>								
+							</div>							
+							<div class="clear"></div>
+						</div>
+					</li>
+					<li>
+						<a href="">米兔</a>
+						<a href="">生活周边</a>
+						<div class="pop">
+							<div class="left fl">
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/93.jpg" alt=""></div>
+											<span class="fl">1</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/94.jpg" alt=""></div>
+											<span class="fl">2</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/95.jpg" alt=""></div>
+											<span class="fl">3</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/96.jpg" alt=""></div>
+											<span class="fl">4</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/97.jpg" alt=""></div>
+											<span class="fl">5</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>
+								<div>
+									<div class="xuangou_left fl">
+										<a href="">
+											<div class="img fl"><img src="./image/98.jpg" alt=""></div>
+											<span class="fl">6</span>
+											<div class="clear"></div>
+										</a>
+									</div>
+									<div class="xuangou_right fr"><a href="">选购</a></div>
+									<div class="clear"></div>
+								</div>								
+							</div>							
+							<div class="clear"></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		
+		</div>	
+
+		<div class="sub_banner center">
+			<div class="sidebar fl">
+				<div class="fl"><a href=""><img src="./image/hjh_01.gif"></a></div>
+				<div class="fl"><a href=""><img src="./image/hjh_02.gif"></a></div>
+				<div class="fl"><a href=""><img src="./image/hjh_03.gif"></a></div>
+				<div class="fl"><a href=""><img src="./image/hjh_04.gif"></a></div>
+				<div class="fl"><a href=""><img src="./image/hjh_05.gif"></a></div>
+				<div class="fl"><a href=""><img src="./image/hjh_06.gif"></a></div>
+				<div class="clear"></div>
+			</div>
+			<div class="datu fl"><a href=""><img src="./image/104.png" alt=""></a></div>
+			<div class="datu fl"><a href=""><img src="./image/105.png" alt=""></a></div>
+			<div class="datu fr"><a href=""><img src="./image/106.png" alt=""></a></div>
+			<div class="clear"></div>
+
+
+		</div>
+	<!-- end banner -->
+	<div class="tlinks">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>
+
+	<!-- start danpin -->
+		<div class="danpin center">
+			
+			<div class="biaoti center">小米明星单品</div>
+			<div class="main center">
+				<div class="mingxing fl">
+					<div class="sub_mingxing"><a href=""><img src="./image/99.jpg" alt=""></a></div>
+					<div class="pinpai"><a href="">红米k80</a></div>
+					<div class="youhui">5月9日-21日享花呗12期分期免息</div>
+					<div class="jiage">3499元起</div>
+				</div>
+				<div class="mingxing fl">
+					<div class="sub_mingxing"><a href=""><img src="./image/101.jpg" alt=""></a></div>
+					<div class="pinpai"><a href="">IQOO Z9</a></div>
+					<div class="youhui">5月9日-10日，下单立减200元</div>
+					<div class="jiage">1999元</div>
+				</div>
+				<div class="mingxing fl">
+					<div class="sub_mingxing"><a href=""><img src="./image/103.jpg" alt=""></a></div>
+					<div class="pinpai"><a href="">荣耀 200</a></div>
+					<div class="youhui">5月9日-10日，下单立减100元</div>
+					<div class="jiage">1799元</div>
+				</div>
+				<div class="mingxing fl"> 	
+					<div class="sub_mingxing"><a href=""><img src="./image/100.jpg" alt=""></a></div>
+					<div class="pinpai"><a href="">小米电视机</a></div>
+					<div class="youhui">5月9日，下单立减200元</div>
+					<div class="jiage">3999元</div>
+				</div>
+				<div class="mingxing fl">
+					<div class="sub_mingxing"><a href=""><img src="./image/102.jpg" alt=""></a></div>
+					<div class="pinpai"><a href="">华为 matebook D16</a></div>
+					<div class="youhui">更轻更薄，像杂志一样随身携带</div>
+					<div class="jiage">3599元起</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<div class="peijian w">
+			<div class="biaoti center">配件</div>
+			<div class="main center">
+				<div class="content">
+					<div class="remen fl"><a href=""><img src="./image/peijian1.jpg"></a>
+					</div>
+					<div class="remen fl">
+						<div class="xinpin"><span>新品</span></div>
+						<div class="tu"><a href=""><img src="./image/108.jpg"></a></div>
+						<div class="miaoshu"><a href="">金丝檀木手链</a></div>
+						<div class="jiage">49元</div>
+						<div class="pingjia">372人评价</div>
+						<div class="piao">
+							<a href="">
+                                <span>发货速度很快！</span>
+								<span>来至于mi狼牙的评价</span>
+							</a>
+						</div>
+					</div>
+					<div class="remen fl">
+						<div class="xinpin"><span style="background:#fff"></span></div>
+						<div class="tu"><a href=""><img src="./image/109.jpg"></a></div>
+						<div class="miaoshu"><a href="">白玉菩提手串</a></div>
+						<div class="jiage">28元</div>
+						<div class="pingjia">372人评价</div>
+					</div>
+					<div class="remen fl">
+						<div class="xinpin"><span style="background:red">享6折</span></div>
+						<div class="tu"><a href=""><img src="./image/110.jpg"></a></div>
+						<div class="miaoshu"><a href="">徕卡Q3 43相机</a></div>
+						<div class="jiage">56300元</div>
+						<div class="pingjia">888人评价</div>
+						<div class="piao">
+							<a href="">
+								<span>东西发送很快，质量很好！</span>
+								<span>来至于零夜初的评价</span>
+							</a>
+						</div>
+					</div>
+					<div class="remen fl">
+						<div class="xinpin"><span style="background:#fff"></span></div>
+						<div class="tu"><a href=""><img src="./image/111.jpg"></a></div>
+						<div class="miaoshu"><a href="">狼蛛F75机械键盘</a></div>
+						<div class="jiage">289元</div>
+						<div class="pingjia">372人评价</div>
+						<div class="piao">
+							<a href="">
+								<span>东西很好用，十分推荐！</span>
+								<span>来至于龙队的评价</span>
+							</a>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="content">
+					<div class="remen fl"><a href=""><img src="./image/peijian6.png"></a>
+					</div>
+					<div class="remen fl">
+						<div class="xinpin"><span style="background:#fff"></span></div>
+						<div class="tu"><a href=""><img src="./image/112.jpg"></a></div>
+						<div class="miaoshu"><a href="">巧克力曲奇饼干</a></div>
+						<div class="jiage">19元</div>
+						<div class="pingjia">1568人评价</div>
+						<div class="piao">
+							<a href="">
+								<span>曲奇饼很多，巧克力豆放的很满！</span>
+								<span>来自于丧彪的评价</span>
+							</a>
+						</div>
+					</div>
+					<div class="remen fl">
+						<div class="xinpin"><span style="background:#fff"></span></div>
+						<div class="tu"><a href=""><img src="./image/peijian8.jpg"></a></div>
+						<div class="miaoshu"><a href="">米家随身风扇</a></div>
+						<div class="jiage">19.9元</div>
+						<div class="pingjia">372人评价</div>
+					</div>
+					<div class="remen fl">
+						<div class="xinpin"><span style="background:#fff"></span></div>
+						<div class="tu"><a href=""><img src="./image/114.jpg"></a></div>
+						<div class="miaoshu"><a href="">华硕天选电脑包</a></div>
+						<div class="jiage">59元</div>
+						<div class="pingjia">775人评价</div>
+					</div>
+					<div class="remenlast fr">
+						<div class="hongmi"><a href=""><img src="./image/hongmin4.png" alt=""></a></div>
+						<div class="liulangengduo"><a href=""><img src="./image/liulangengduo.png" alt=""></a></div>					
+					</div>
+					<div class="clear"></div>
+				</div>				
+			</div>
+		</div>
+		<footer class="mt20 center">			
+			<div class="mt20"></div>
+			<div></div> 
+			<div></div>
+		</footer>
+	</body>
 </html>
